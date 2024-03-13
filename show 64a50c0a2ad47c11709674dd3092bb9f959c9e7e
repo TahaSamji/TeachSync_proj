@@ -1,0 +1,67 @@
+[33mcommit 64a50c0a2ad47c11709674dd3092bb9f959c9e7e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: d35689f 6c0c2f8
+Author: Usman960 <mu943498@gmail.com>
+Date:   Tue Dec 12 00:51:04 2023 +0500
+
+    courses can be split using comma sep values
+
+[33mcommit d35689faba066ad2244de2411f6c06dc64130455[m
+Author: Usman960 <mu943498@gmail.com>
+Date:   Tue Dec 12 00:47:16 2023 +0500
+
+    split courses based on comma sep values
+
+[33mcommit 6c0c2f832a6ff8310a309c64607123f89e068e18[m
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Mon Dec 11 15:21:35 2023 +0500
+
+    change password api
+
+[33mcommit d001456c670620affa8d000767372c9417df5bfa[m
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Sun Dec 10 02:09:37 2023 +0500
+
+    appointment date fix
+
+[33mcommit 726ddc1b68e344cf5674d73164f3a1a58b8e969d[m
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Fri Dec 1 17:58:26 2023 +0500
+
+    scrum 4 6
+
+[33mcommit 56a4ac6d6d970596571f15c96dd1db0eee9d8dfb[m
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Sat Nov 25 19:20:04 2023 +0500
+
+    forgot password search profs create appointments
+
+[33mcommit dc1833618636a1cceb04ef962b36e67560ab630b[m[33m ([m[1;31morigin/Signup-backend-branch[m[33m)[m
+Author: Usman960 <mu943498@gmail.com>
+Date:   Thu Nov 16 00:07:44 2023 +0500
+
+    Signup backend completed
+
+[33mcommit 20aa6b0b22a4e58bd2768419808f9dfbff223199[m
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Tue Nov 14 18:43:50 2023 +0500
+
+    change in schema
+
+[33mcommit 156669085b884763d29271f3cbd22a4bafdad9d6[m
+Merge: 47dab07 6c97dff
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Sun Nov 12 21:19:49 2023 +0500
+
+    Merge branch 'main' of https://github.com/MusabIqbal2/TeachSyncProject
+
+[33mcommit 47dab075786e0b0e8338cc607ed62baa86c452b4[m
+Author: hammad ul haq <hammad1029@gmail.com>
+Date:   Sun Nov 12 21:18:34 2023 +0500
+
+    Initial commit with working login signup
+
+[33mcommit 6c97dff5dd613aea7726b7bd99121e593231c9a7[m
+Author: MusabIqbal2 <138568020+MusabIqbal2@users.noreply.github.com>
+Date:   Tue Nov 7 01:40:19 2023 +0500
+
+    Initial commit

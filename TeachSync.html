@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TeachSync</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.configure({
+            tabReplace: '    ',
+        });
+        hljs.initHighlightingOnLoad();
+    </script>
+    <style>body {
+    position: relative;
+}
+
+h1 {
+    margin-top: 5px;
+}
+
+h1, h2, h3, h4 {
+    color: #2b2b2b;
+}
+
+h2:after {
+    content: ' ';
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    display: none;
+    position: absolute;
+    margin-left: 8px;
+}
+
+h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
+    color: #a5a5a5;
+    display: initial;
+}
+
+.nav.nav-tabs > li > a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.tab-content {
+    padding-top: 8px;
+}
+
+.table {
+    margin-bottom: 8px;
+}
+
+pre {
+    border-radius: 0px;
+    border: none;
+}
+
+pre code {
+    margin: -9.5px;
+}
+
+.request {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.response-text-sample {
+    padding: 0px !important;
+}
+
+.response-text-sample pre {
+    margin-bottom: 0px;
+}
+
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #2b2b2b;
+    padding-top: 20px;
+}
+
+#sidebar-wrapper ul {
+    width: 250px;
+}
+
+#sidebar-wrapper ul li {
+    margin-right: 10px;
+}
+
+#sidebar-wrapper ul li a:hover {
+    background: inherit;
+    text-decoration: none;
+}
+
+#sidebar-wrapper ul li a {
+    display: block;
+    color: #ECF0F1;
+    padding: 6px 15px;
+}
+
+#sidebar-wrapper ul li ul {
+    padding-left: 25px;
+}
+
+#sidebar-wrapper ul li ul li a {
+    padding: 1px 0px;
+}
+
+#sidebar-wrapper ul li a:hover,
+#sidebar-wrapper ul li a:focus {
+    color: #e0c46c;
+    border-right: solid 1px #e0c46c;
+}
+
+#sidebar-wrapper ul li.active > a {
+    color: #e0c46c;
+    border-right: solid 3px #e0c46c;
+}
+
+#sidebar-wrapper ul li:not(.active) ul {
+    display: none;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px 15px 15px 250px;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+<div id="sidebar-wrapper">
+    <div class="scrollspy">
+    <ul id="main-menu" data-spy="affix" class="nav">
+        <li>
+            <a href="#doc-general-notes">General notes</a>
+        </li>
+        
+        <li>
+            <a href="#doc-api-detail">API detail</a>
+        </li>
+        
+        <li>
+            <a href="#request-sign-up">Sign Up</a>
+        </li>
+        
+        <li>
+            <a href="#request-forgot-password">Forgot Password</a>
+        </li>
+        
+        <li>
+            <a href="#request-sign-in">Sign in</a>
+        </li>
+        
+        <li>
+            <a href="#request-search-teachers">Search Teachers</a>
+        </li>
+        
+        <li>
+            <a href="#request-create-appointment">Create Appointment</a>
+        </li>
+        
+        <li>
+            <a href="#request-list-appointments">List Appointments</a>
+        </li>
+        
+        <li>
+            <a href="#request-update-appointment">Update Appointment</a>
+        </li>
+        
+        <li>
+            <a href="#request-change-password">Change Password</a>
+        </li>
+        
+        <li>
+            <a href="#request-update-profile">Update Profile</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+</div>
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>TeachSync</h1>
+
+                <h2 id="doc-general-notes">
+                    General notes
+                    <a href="#doc-general-notes"><i class="glyphicon glyphicon-link"></i></a>
+                </h2>
+
+                
+
+                
+
+                <h2 id="doc-api-detail">
+                    API detail
+                    <a href="#doc-api-detail"><i class="glyphicon glyphicon-link"></i></a>
+                </h2>
+
+                
+                
+                <div class="request">
+
+                    <h3 id="request-sign-up">
+                        Sign Up
+                        <a href="#request-sign-up"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-sign-up-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-sign-up-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-sign-up-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -d '{
+    "email": "abc@xyz.com",
+    "password": "password",
+    "firstName": "hammad",
+    "lastName": "ul haq",
+    "role": "Professor",
+    "program": "abc",
+    "batch": "abc",
+    "coursesAssigned": ["abc"],
+    "officeHours": ["xyz"],
+    "department": "gef"
+}' "http://localhost:5600/auth/signup"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-sign-up-example-http">
+                                <pre><code class="hljs http">POST /auth/signup HTTP/1.1
+Host: localhost:5600
+
+{
+    "email": "abc@xyz.com",
+    "password": "password",
+    "firstName": "hammad",
+    "lastName": "ul haq",
+    "role": "Professor",
+    "program": "abc",
+    "batch": "abc",
+    "coursesAssigned": ["abc"],
+    "officeHours": ["xyz"],
+    "department": "gef"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-sign-up-responses-0425261b-1f72-4597-8324-4d3aee8765d9" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-sign-up-responses-0425261b-1f72-4597-8324-4d3aee8765d9">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>53</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"35-seGJaqVfFoeuRx0r9hjW3BLZpSU"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:26:43 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success"
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-forgot-password">
+                        Forgot Password
+                        <a href="#request-forgot-password"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-forgot-password-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-forgot-password-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-forgot-password-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -d '{
+    "email": "hammad1029@gmail.com"
+}' "http://localhost:5600/auth/forgetPassword"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-forgot-password-example-http">
+                                <pre><code class="hljs http">POST /auth/forgetPassword HTTP/1.1
+Host: localhost:5600
+
+{
+    "email": "hammad1029@gmail.com"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-forgot-password-responses-0034051a-2329-4c3a-82aa-954a8d14f749" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-forgot-password-responses-0034051a-2329-4c3a-82aa-954a8d14f749">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>53</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"35-seGJaqVfFoeuRx0r9hjW3BLZpSU"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:27:54 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success"
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-sign-in">
+                        Sign in
+                        <a href="#request-sign-in"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-sign-in-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-sign-in-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-sign-in-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -d '{
+    "email": "hammad1029@gmail.com",
+    "password": "password"
+}' "http://localhost:5600/auth/login"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-sign-in-example-http">
+                                <pre><code class="hljs http">POST /auth/login HTTP/1.1
+Host: localhost:5600
+
+{
+    "email": "hammad1029@gmail.com",
+    "password": "password"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-sign-in-responses-b802dfb6-1349-4083-93b0-41f616a8ade7" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-sign-in-responses-b802dfb6-1349-4083-93b0-41f616a8ade7">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>594</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"252-vEsPQQlxoTM33Q5gNV9/H/a0FVA"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:27:32 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success",
+    "data": {
+        "userDetails": {
+            "_id": "657dcfc3018ab2055edb0e6e",
+            "email": "max.well@gmail.com",
+            "firstName": "Max",
+            "lastName": "Well",
+            "role": "Student",
+            "program": "Computer science",
+            "batch": "2022",
+            "coursesAssigned": [],
+            "officeHours": [],
+            "createdAt": "2023-12-16T16:26:43.465Z",
+            "__v": 0
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2RjZmMzMDE4YWIyMDU1ZWRiMGU2ZSIsImVtYWlsIjoibWF4LndlbGxAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0xMi0xNlQxNjoyNzozMi40ODFaIiwiaWF0IjoxNzAyNzQ0MDUyLCJleHAiOjE3MDI4MzA0NTJ9.7KH6C8_7v2Md8WWvrfS6ILl59wzgJluxjgrf8PGWLPc"
+    }
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-search-teachers">
+                        Search Teachers
+                        <a href="#request-search-teachers"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-search-teachers-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-search-teachers-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-search-teachers-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -H "Authorization: {{Auth Token}}" -d '{
+    "keyword": "l"
+}' "http://localhost:5600/appointments/search"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-search-teachers-example-http">
+                                <pre><code class="hljs http">POST /appointments/search HTTP/1.1
+Host: localhost:5600
+Authorization: {{Auth Token}}
+
+{
+    "keyword": "l"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-search-teachers-responses-bc1919c2-e4fc-4373-bf5c-469a7d4690cb" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-search-teachers-responses-bc1919c2-e4fc-4373-bf5c-469a7d4690cb">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>522</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"20a-2fB0EMWoJfshXOTTw98qAM6SrkY"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:28:32 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success",
+    "data": [
+        {
+            "_id": "657979018f7f1c2efbefc984",
+            "email": "t.iqbal@gmail.com",
+            "firstName": "Tamim",
+            "lastName": "Iqbal",
+            "role": "Professor",
+            "coursesAssigned": [
+                "Intro to Data Mining,Computer Vision, Lineaar Algebra"
+            ],
+            "officeHours": [
+                {
+                    "day": "Tuesday",
+                    "slot": "10:00 - 11:15"
+                },
+                {
+                    "day": "Tuesday",
+                    "slot": "11:30 - 12:45"
+                },
+                {
+                    "day": "Wednesday",
+                    "slot": "13:00 - 14:15"
+                },
+                {
+                    "day": "Thursday",
+                    "slot": "11:30 - 12:45"
+                }
+            ],
+            "department": "Computer Science",
+            "createdAt": "2023-12-13T09:27:29.502Z",
+            "__v": 16
+        }
+    ]
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-create-appointment">
+                        Create Appointment
+                        <a href="#request-create-appointment"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-create-appointment-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-create-appointment-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-create-appointment-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -H "Authorization: {{Auth Token}}" -d '{
+    "appointee": "6561f2f355ea934c208b280b",
+    "date": "2023-11-26T12:33:11",,
+    "toDate": "2023-11-26T13:33:11",
+    "description": "grade dedo"
+}' "http://localhost:5600/appointments/create"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-create-appointment-example-http">
+                                <pre><code class="hljs http">POST /appointments/create HTTP/1.1
+Host: localhost:5600
+Authorization: {{Auth Token}}
+
+{
+    "appointee": "6561f2f355ea934c208b280b",
+    "date": "2023-11-26T12:33:11",,
+    "toDate": "2023-11-26T13:33:11",
+    "description": "grade dedo"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-create-appointment-responses-1a81139e-fe77-4b53-a003-3f45fac1eaa5" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-create-appointment-responses-1a81139e-fe77-4b53-a003-3f45fac1eaa5">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>53</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"35-seGJaqVfFoeuRx0r9hjW3BLZpSU"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:29:34 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success"
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-list-appointments">
+                        List Appointments
+                        <a href="#request-list-appointments"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-list-appointments-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-list-appointments-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-list-appointments-example-curl">
+                                <pre><code class="hljs curl">curl -X GET -H "Authorization: {{Auth Token}}" "http://localhost:5600/appointments/getAll"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-list-appointments-example-http">
+                                <pre><code class="hljs http">GET /appointments/getAll HTTP/1.1
+Host: localhost:5600
+Authorization: {{Auth Token}}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-list-appointments-responses-b87c95da-93c1-406a-89fe-3c1882d28be4" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-list-appointments-responses-b87c95da-93c1-406a-89fe-3c1882d28be4">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>561</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"231-Ccxi9aXZVgqDGbu7sbqx9JUOB9U"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:30:36 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success",
+    "data": [
+        {
+            "_id": "657dd06e018ab2055edb0e79",
+            "appointer": {
+                "_id": "657dcfc3018ab2055edb0e6e",
+                "email": "max.well@gmail.com",
+                "password": "$2b$05$N8QEIFfeo/NfVK68T3j/hOosMLqaEaRVU06U9mWuFQZH.SknkeZOO",
+                "firstName": "Max",
+                "lastName": "Well",
+                "role": "Student",
+                "program": "Computer science",
+                "batch": "2022",
+                "coursesAssigned": [],
+                "officeHours": [],
+                "createdAt": "2023-12-16T16:26:43.465Z",
+                "__v": 0
+            },
+            "appointee": null,
+            "toDate": "2023-11-26T13:33:11",
+            "description": "grade plz",
+            "confirmed": 0,
+            "completed": false,
+            "cancelled": false,
+            "__v": 0
+        }
+    ]
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-update-appointment">
+                        Update Appointment
+                        <a href="#request-update-appointment"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-update-appointment-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-update-appointment-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-update-appointment-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -H "Authorization: {{Auth Token}}" -d '{
+    "id": "65688b67e9dd127474fabd8c",
+    // "confirmed": 2
+    // "cancelled": false,
+    // "completed": false,
+    // "dateTime": "2023-11-12T00:00:00",
+    "description": "sadsd"
+}' "http://localhost:5600/appointments/update"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-update-appointment-example-http">
+                                <pre><code class="hljs http">POST /appointments/update HTTP/1.1
+Host: localhost:5600
+Authorization: {{Auth Token}}
+
+{
+    "id": "65688b67e9dd127474fabd8c",
+    // "confirmed": 2
+    // "cancelled": false,
+    // "completed": false,
+    // "dateTime": "2023-11-12T00:00:00",
+    "description": "sadsd"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-update-appointment-responses-37fbda46-b67e-403c-9f98-4c745bea3b1c" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-update-appointment-responses-37fbda46-b67e-403c-9f98-4c745bea3b1c">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>53</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"35-seGJaqVfFoeuRx0r9hjW3BLZpSU"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:31:17 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success"
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-change-password">
+                        Change Password
+                        <a href="#request-change-password"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-change-password-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-change-password-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-change-password-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -H "Authorization: {{Auth Token}}" -H "Content-Type: application/json" -d '{
+    "password": "newPassword123",
+    "confirmPassword": "newPassword123"
+}
+' "http://localhost:5600/auth/changePassword"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-change-password-example-http">
+                                <pre><code class="hljs http">POST /auth/changePassword HTTP/1.1
+Host: localhost:5600
+Authorization: {{Auth Token}}
+Content-Type: application/json
+
+{
+    "password": "newPassword123",
+    "confirmPassword": "newPassword123"
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-change-password-responses-04fa6607-a8f9-48d4-8568-8de5eb5d177b" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-change-password-responses-04fa6607-a8f9-48d4-8568-8de5eb5d177b">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>53</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"35-seGJaqVfFoeuRx0r9hjW3BLZpSU"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:28:13 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success"
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+                
+                <div class="request">
+
+                    <h3 id="request-update-profile">
+                        Update Profile
+                        <a href="#request-update-profile"><i class="glyphicon glyphicon-link"></i></a>
+                    </h3>
+
+                    <div></div>
+
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#request-update-profile-example-curl" data-toggle="tab">Curl</a></li>
+                            <li role="presentation"><a href="#request-update-profile-example-http" data-toggle="tab">HTTP</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="request-update-profile-example-curl">
+                                <pre><code class="hljs curl">curl -X POST -H "Content-Type: application/json" -H "Authorization: {{Auth Token}}" -d '{
+  "firstName": "NewFirstName",
+  "lastName": "NewLastName",
+  "coursesAssigned": ["Course1", "Course2"],
+  "officeHours": [
+    {"day": "Monday", "startTime": "09:00 AM", "endTime": "05:00 PM"},
+    {"day": "Wednesday", "startTime": "10:00 AM", "endTime": "06:00 PM"}
+  ],
+  "department": "NewDepartment"
+}
+' "http://localhost:5600/auth/updateProfile"</code></pre>
+                            </div>
+                            <div class="tab-pane" id="request-update-profile-example-http">
+                                <pre><code class="hljs http">POST /auth/updateProfile HTTP/1.1
+Host: localhost:5600
+Content-Type: application/json
+Authorization: {{Auth Token}}
+
+{
+  "firstName": "NewFirstName",
+  "lastName": "NewLastName",
+  "coursesAssigned": ["Course1", "Course2"],
+  "officeHours": [
+    {"day": "Monday", "startTime": "09:00 AM", "endTime": "05:00 PM"},
+    {"day": "Wednesday", "startTime": "10:00 AM", "endTime": "06:00 PM"}
+  ],
+  "department": "NewDepartment"
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            
+                            <li role="presentation" class="active">
+                                <a href="#request-update-profile-responses-beb8e21e-853b-4009-8e12-d3f36951ee1c" data-toggle="tab">
+                                    
+                                    Response
+                                    
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="request-update-profile-responses-beb8e21e-853b-4009-8e12-d3f36951ee1c">
+                                <table class="table table-bordered">
+                                    <tr><th style="width: 20%;">Status</th><td>200 OK</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">X-Powered-By</th><td>Express</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Access-Control-Allow-Origin</th><td>*</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Type</th><td>application/json; charset=utf-8</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Content-Length</th><td>53</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">ETag</th><td>W/"35-seGJaqVfFoeuRx0r9hjW3BLZpSU"</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Date</th><td>Sat, 16 Dec 2023 16:31:31 GMT</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Connection</th><td>keep-alive</td></tr>
+                                    
+                                    <tr><th style="width: 20%;">Keep-Alive</th><td>timeout=5</td></tr>
+                                    
+                                    
+                                    
+                                    <tr><td class="response-text-sample" colspan="2">
+                                        <pre><code>{
+    "responseCode": "00",
+    "responseDescription": "Success"
+}</code></pre>
+                                    </td></tr>
+                                    
+                                    
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+
+                    <hr>
+                </div>
+                
+
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("table:not(.table)").addClass('table table-bordered');
+    });
+</script>
+</body>
+</html>

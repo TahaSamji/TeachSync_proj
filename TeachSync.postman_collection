@@ -1,0 +1,976 @@
+{
+	"info": {
+		"_postman_id": "282af504-4b88-4b14-a5b6-c534b9928c75",
+		"name": "TeachSync",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29990721"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"password\": \"password\",\r\n    \"firstName\": \"hammad\",\r\n    \"lastName\": \"ul haq\",\r\n    \"role\": \"Professor\",\r\n    \"program\": \"abc\",\r\n    \"batch\": \"abc\",\r\n    \"coursesAssigned\": [\"abc\"],\r\n    \"officeHours\": [\"xyz\"],\r\n    \"department\": \"gef\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5600/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign Up",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"max.well@gmail.com\",\r\n    \"password\": \"pwd123\",\r\n    \"firstName\": \"Max\",\r\n    \"lastName\": \"Well\",\r\n    \"role\": \"Student\",\r\n    \"program\": \"Computer science\",\r\n    \"batch\": \"2022\",\r\n    \"coursesAssigned\": [\"abc\"],\r\n    \"officeHours\": [\"xyz\"],\r\n    \"department\": \"gef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-seGJaqVfFoeuRx0r9hjW3BLZpSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:26:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hammad1029@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5600/auth/forgetPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"auth",
+						"forgetPassword"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Forgot Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"max.well@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/auth/forgetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"forgetPassword"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-seGJaqVfFoeuRx0r9hjW3BLZpSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:27:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Sign in",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.sendRequest({\r",
+							"    url: 'http://localhost:5600/auth/login',\r",
+							"    method: 'POST',\r",
+							"    header: {\r",
+							"        'content-type': 'application/json'\r",
+							"    },\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"            \"email\": \"hammad1029@gmail.com\",\r",
+							"            \"password\": \"password\"\r",
+							"        })\r",
+							"    }\r",
+							"}, (err, res) => pm.collectionVariables.set(\"Auth Token\",\r",
+							"    `Bearer ${res.json().responseCode === \"00\" ? res.json().data.token : undefined}`));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hammad1029@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5600/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"max.well@gmail.com\",\r\n    \"password\": \"pwd123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "594"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"252-vEsPQQlxoTM33Q5gNV9/H/a0FVA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:27:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\",\n    \"data\": {\n        \"userDetails\": {\n            \"_id\": \"657dcfc3018ab2055edb0e6e\",\n            \"email\": \"max.well@gmail.com\",\n            \"firstName\": \"Max\",\n            \"lastName\": \"Well\",\n            \"role\": \"Student\",\n            \"program\": \"Computer science\",\n            \"batch\": \"2022\",\n            \"coursesAssigned\": [],\n            \"officeHours\": [],\n            \"createdAt\": \"2023-12-16T16:26:43.465Z\",\n            \"__v\": 0\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2RjZmMzMDE4YWIyMDU1ZWRiMGU2ZSIsImVtYWlsIjoibWF4LndlbGxAZ21haWwuY29tIiwiY3JlYXRlZEF0IjoiMjAyMy0xMi0xNlQxNjoyNzozMi40ODFaIiwiaWF0IjoxNzAyNzQ0MDUyLCJleHAiOjE3MDI4MzA0NTJ9.7KH6C8_7v2Md8WWvrfS6ILl59wzgJluxjgrf8PGWLPc\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Teachers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Auth Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\": \"l\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5600/appointments/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"appointments",
+						"search"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search Teachers",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Auth Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"keyword\": \"tamim\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/appointments/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"appointments",
+								"search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "522"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20a-2fB0EMWoJfshXOTTw98qAM6SrkY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:28:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"657979018f7f1c2efbefc984\",\n            \"email\": \"t.iqbal@gmail.com\",\n            \"firstName\": \"Tamim\",\n            \"lastName\": \"Iqbal\",\n            \"role\": \"Professor\",\n            \"coursesAssigned\": [\n                \"Intro to Data Mining,Computer Vision, Lineaar Algebra\"\n            ],\n            \"officeHours\": [\n                {\n                    \"day\": \"Tuesday\",\n                    \"slot\": \"10:00 - 11:15\"\n                },\n                {\n                    \"day\": \"Tuesday\",\n                    \"slot\": \"11:30 - 12:45\"\n                },\n                {\n                    \"day\": \"Wednesday\",\n                    \"slot\": \"13:00 - 14:15\"\n                },\n                {\n                    \"day\": \"Thursday\",\n                    \"slot\": \"11:30 - 12:45\"\n                }\n            ],\n            \"department\": \"Computer Science\",\n            \"createdAt\": \"2023-12-13T09:27:29.502Z\",\n            \"__v\": 16\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Auth Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appointee\": \"6561f2f355ea934c208b280b\",\r\n    \"date\": \"2023-11-26T12:33:11\",,\r\n    \"toDate\": \"2023-11-26T13:33:11\",\r\n    \"description\": \"grade dedo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5600/appointments/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"appointments",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Appointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Auth Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointee\": \"6561f2f355ea934c208b280b\",\r\n    \"date\": \"2023-11-26T12:33:11\",\r\n    \"toDate\": \"2023-11-26T13:33:11\",\r\n    \"description\": \"grade plz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/appointments/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"appointments",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-seGJaqVfFoeuRx0r9hjW3BLZpSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:29:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Appointments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Auth Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5600/appointments/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"appointments",
+						"getAll"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Appointments",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Auth Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5600/appointments/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"appointments",
+								"getAll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "561"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"231-Ccxi9aXZVgqDGbu7sbqx9JUOB9U\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:30:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"657dd06e018ab2055edb0e79\",\n            \"appointer\": {\n                \"_id\": \"657dcfc3018ab2055edb0e6e\",\n                \"email\": \"max.well@gmail.com\",\n                \"password\": \"$2b$05$N8QEIFfeo/NfVK68T3j/hOosMLqaEaRVU06U9mWuFQZH.SknkeZOO\",\n                \"firstName\": \"Max\",\n                \"lastName\": \"Well\",\n                \"role\": \"Student\",\n                \"program\": \"Computer science\",\n                \"batch\": \"2022\",\n                \"coursesAssigned\": [],\n                \"officeHours\": [],\n                \"createdAt\": \"2023-12-16T16:26:43.465Z\",\n                \"__v\": 0\n            },\n            \"appointee\": null,\n            \"toDate\": \"2023-11-26T13:33:11\",\n            \"description\": \"grade plz\",\n            \"confirmed\": 0,\n            \"completed\": false,\n            \"cancelled\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Auth Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"65688b67e9dd127474fabd8c\",\r\n    // \"confirmed\": 2\r\n    // \"cancelled\": false,\r\n    // \"completed\": false,\r\n    // \"dateTime\": \"2023-11-12T00:00:00\",\r\n    \"description\": \"sadsd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5600/appointments/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"appointments",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Appointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Auth Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"657dd06e018ab2055edb0e79\",\r\n    // \"confirmed\": 2\r\n    // \"cancelled\": false,\r\n    // \"completed\": false,\r\n    // \"dateTime\": \"2023-11-12T00:00:00\",\r\n    \"description\": \"grade achieved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5600/appointments/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"appointments",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-seGJaqVfFoeuRx0r9hjW3BLZpSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:31:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Auth Token}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"newPassword123\",\r\n    \"confirmPassword\": \"newPassword123\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5600/auth/changePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"auth",
+						"changePassword"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Auth Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"newPassword123\",\r\n    \"confirmPassword\": \"newPassword123\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5600/auth/changePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"changePassword"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-seGJaqVfFoeuRx0r9hjW3BLZpSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:28:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{Auth Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"NewFirstName\",\r\n  \"lastName\": \"NewLastName\",\r\n  \"coursesAssigned\": [\"Course1\", \"Course2\"],\r\n  \"officeHours\": [\r\n    {\"day\": \"Monday\", \"startTime\": \"09:00 AM\", \"endTime\": \"05:00 PM\"},\r\n    {\"day\": \"Wednesday\", \"startTime\": \"10:00 AM\", \"endTime\": \"06:00 PM\"}\r\n  ],\r\n  \"department\": \"NewDepartment\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:5600/auth/updateProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5600",
+					"path": [
+						"auth",
+						"updateProfile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Profile",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{Auth Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"NewFirstName\",\r\n  \"lastName\": \"NewLastName\",\r\n  \"coursesAssigned\": [\"Course1\", \"Course2\"],\r\n  \"officeHours\": [\r\n    {\"day\": \"Monday\", \"startTime\": \"09:00 AM\", \"endTime\": \"05:00 PM\"},\r\n    {\"day\": \"Wednesday\", \"startTime\": \"10:00 AM\", \"endTime\": \"06:00 PM\"}\r\n  ],\r\n  \"department\": \"NewDepartment\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:5600/auth/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"updateProfile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-seGJaqVfFoeuRx0r9hjW3BLZpSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Dec 2023 16:31:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"responseCode\": \"00\",\n    \"responseDescription\": \"Success\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Auth Token",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlcnAiOiIyNTI1MiIsImNyZWF0ZWRBdCI6IjIwMjMtMTAtMjBUMjI6MzU6MjYuMTM0WiIsImlhdCI6MTY5Nzg0MTMyNiwiZXhwIjoxNjk3OTI3NzI2fQ.o0HHznYDwgIKU1XjS1iaHEvhboamqIbzVrVz3pDzxa8"
+		},
+		{
+			"key": "Auth Token",
+			"value": ""
+		},
+		{
+			"key": "TOKEN",
+			"value": ""
+		}
+	]
+}
