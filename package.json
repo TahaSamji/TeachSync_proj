@@ -1,0 +1,66 @@
+{
+  "name": "berry-free-material-react-cra",
+  "version": "3.3.2",
+  "private": true,
+  "homepage": "https://berrydashboard.io/",
+  "dependencies": {
+    "@emotion/cache": "^11.9.3",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "^5.0.0-alpha.88",
+    "@mui/material": "^5.8.6",
+    "@mui/system": "^5.8.6",
+    "@mui/utils": "^5.8.6",
+    "@popperjs/core": "^2.11.8",
+    "@tabler/icons": "^1.72.0",
+    "apexcharts": "^3.35.3",
+    "axios": "^1.6.1",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.3.16",
+    "material-ui-popup-state": "^4.0.1",
+    "moment": "^2.29.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-big-calendar": "^1.8.5",
+    "react-device-detect": "^2.2.2",
+    "react-dom": "^18.2.0",
+    "react-notifications": "^1.7.4",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-redux": "^8.0.2",
+    "react-router": "6.3.0",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "not IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "immutable": "^4.3.0",
+    "prettier": "^2.8.7",
+    "sass": "^1.53.0"
+  }
+}
